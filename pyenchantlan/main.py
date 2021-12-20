@@ -48,6 +48,8 @@ def main():
             if not os.path.isfile(site_packages + ruta_tokenize + idioma + ".py"):
                 shutil.copy(site_packages + ruta_tokenize + "en.py",
                             site_packages + ruta_tokenize + idioma + ".py")
+        else:
+            print("Ya existe el país, importación cancelada.")
     else:
         os.system('pydocstyle --convention=numpy ' + sys.argv[-1])
 
