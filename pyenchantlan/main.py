@@ -36,7 +36,7 @@ def main():
         if not os.path.isfile(site_packages + ruta_huspell + pais + '.dic'):
 
             # Descarga los archivos
-            descargar_diccionario("es", "es_CO")
+            descargar_diccionario(idioma, pais)
 
             # Mueve los archivos
             shutil.move(pais + '.aff',
