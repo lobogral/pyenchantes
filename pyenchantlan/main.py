@@ -51,7 +51,8 @@ def main():
         else:
             print("Ya existe el país, importación cancelada.")
     else:
-        os.system('pydocstyle --convention=numpy ' + sys.argv[-1])
+        comando = 'pylint --disable all --enable spelling --spelling-dict '
+        os.system(comando + sys.argv[1] + ' ' + sys.argv[2])
 
 if __name__ == '__main__':
     main()
