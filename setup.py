@@ -13,7 +13,7 @@ def url_release(package: str) -> str:
 
 
 setup(
-    name="pyenchantlan",
+    name="pyenchantlen",
     version="0.1",
     packages=find_packages(),
     install_requires=[
@@ -23,7 +23,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'pyenchantlan = pyenchantlan.main:main'
+            'pyenchantlen = pyenchantlen.main:main'
         ]
     }
 )
