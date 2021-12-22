@@ -24,7 +24,7 @@ def descargar_diccionario(idioma: str, pais: str) -> None:
 def main():
     """Método principal."""
 
-    if sys.argv[1] == "--agregar":
+    if sys.argv[1] == "--add-pais":
         # Obtiene la carpeta donde se instalan las dependencias
         # sea de entorno virtual o no
         site_packages = site.getsitepackages()[1]
