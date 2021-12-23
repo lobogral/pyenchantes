@@ -1,13 +1,13 @@
 """Agrega un país e idioma al enchant."""
-import wget
 import site
 import shutil
 import os
 import sys
+import wget
+
 
 def descargar_diccionario(idioma: str, pais: str) -> None:
-    """
-    Hace la descarga de los correspondientes archivos .dic y .aff
+    """Hace la descarga de archivos (.dic y .aff).
 
     Parameters
     ----------
@@ -16,14 +16,13 @@ def descargar_diccionario(idioma: str, pais: str) -> None:
     pais
         País concreto del diccionario
     """
-    
-    URL = "https://cgit.freedesktop.org/libreoffice/dictionaries/plain/"
-    wget.download(URL + '/' + idioma + '/' + pais + '.aff', pais + '.aff')
-    wget.download(URL + '/' + idioma + '/' + pais + '.dic', pais + '.dic') 
+    url = "https://cgit.freedesktop.org/libreoffice/dictionaries/plain/"
+    wget.download(url + '/' + idioma + '/' + pais + '.aff', pais + '.aff')
+    wget.download(url + '/' + idioma + '/' + pais + '.dic', pais + '.dic')
+
 
 def main():
     """Método principal."""
-
     if sys.argv[1] == "--add-pais":
         # Obtiene la carpeta donde se instalan las dependencias
         # sea de entorno virtual o no
@@ -45,7 +44,8 @@ def main():
                         site_packages + ruta_huspell + pais + '.dic')
 
             # Copia el archivo de idioma
-            if not os.path.isfile(site_packages + ruta_tokenize + idioma + ".py"):
+            archivo = site_packages + ruta_tokenize + idioma + ".py"
+            if not os.path.isfile(archivo):
                 shutil.copy(site_packages + ruta_tokenize + "en.py",
                             site_packages + ruta_tokenize + idioma + ".py")
         else:
@@ -53,6 +53,7 @@ def main():
     else:
         comando = 'pylint --disable all --enable spelling --spelling-dict '
         os.system(comando + sys.argv[1] + ' ' + sys.argv[2])
+
 
 if __name__ == '__main__':
     main()
