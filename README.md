@@ -1,8 +1,8 @@
 # pyenchantlen
 
-Corrector ortográfico de docstrings simplificado basado en pyenchant.
+Corrector ortográfico de docstrings en python simplificado basado en pyenchant.
 
-Podría decirse que el código expresado aquí es una envolura de pyenchant con pylint para que funcione exclusivamente como corrector ortográfico de docstrings, y evitar comandos complicados [^fn3].
+Podría decirse que el código expresado aquí es una envolura de pyenchant con pylint para que funcione exclusivamente como corrector ortográfico de docstrings en python, y evitar comandos complicados [^fn3].
 
 ## Instalación
 
