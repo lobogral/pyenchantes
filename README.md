@@ -2,7 +2,7 @@
 
 Corrector ortográfico simplificado basado en pyenchant.
 
-Podría decirse que el código expresado aquí es una envolura de pyenchant con pylint para que funcione exclusivamente como corrector ortográfico.
+Podría decirse que el código expresado aquí es una envolura de pyenchant con pylint para que funcione exclusivamente como corrector ortográfico, y evitar comandos complicados [^fn3].
 
 ## Instalación
 
@@ -28,6 +28,12 @@ Sólo es necesario escribir el comando, el código del país, y la carpeta o arc
     
 ## Agregar diccionario
     
-Si se desea agregar un diccionario de otro país, incluso si no se usa el idioma español, se puede usar el comando, con idioma y país, por ejemplo:
+Si se desea agregar un diccionario de otro país (se utilizan diccionarios de LibreOffice [^fn1][^fn2]), incluso si no se usa el idioma español, se puede usar el comando, con idioma y país, por ejemplo:
 
     $ pyenchantlen --add-pais es es_AR 
+    
+[^fn1]: https://pyenchant.github.io/pyenchant/install.html
+
+[^fn2]: https://cgit.freedesktop.org/libreoffice/dictionaries/tree/
+
+[^fn3]: https://stackoverflow.com/questions/27162315/automated-docstring-and-comments-spell-check
